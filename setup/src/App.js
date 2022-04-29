@@ -6,6 +6,7 @@ function App() {
   
   return <main>
     <div className="section-title">
+      {/* ternary operator */}
       <h1>{loading ? 'loading...' : 'pagination'}</h1>
       <div className="underline"></div>
     </div>

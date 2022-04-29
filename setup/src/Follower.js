@@ -1,5 +1,5 @@
 import React from 'react'
-
+// destructure
 const Follower = ({ avatar_url, html_url, login }) => {
   return (
     <article className='card'>

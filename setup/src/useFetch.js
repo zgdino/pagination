@@ -6,7 +6,9 @@ export const useFetch = () => {
   const [loading, setLoading] = useState(true)
   const [data, setData] = useState([])
 
+  // async function
   const getProducts = async () => {
+    // when fetching data always await
     const response = await fetch(url)
     const data = await response.json()
     setData(data)
