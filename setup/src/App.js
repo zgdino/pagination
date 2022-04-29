@@ -9,6 +9,15 @@ function App() {
       <h1>{loading ? 'loading...' : 'pagination'}</h1>
       <div className="underline"></div>
     </div>
+    <section className="followers">
+      <div className="container">
+        {data.map((follower) => {
+          // existing follower.id from the API
+          // ...follower is adding all the properties from that specific follower from API
+          return <Follower key={follower.id} {...follower}/>
+        })}
+      </div>
+    </section>
   </main>
 }
 
