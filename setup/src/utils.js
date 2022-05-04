@@ -1,4 +1,5 @@
 const paginate = (followers) => {
+  // setting up how many items per page we want to see
   const itemsPerPage = 10
   // using Math.ceil to round up the number
   const pages = Math.ceil(followers.length / itemsPerPage)
