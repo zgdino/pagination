@@ -11,8 +11,8 @@ export const useFetch = () => {
     // when fetching data always await
     const response = await fetch(url)
     const data = await response.json()
-    paginate(data)
-    setData(data)
+    
+    setData(paginate(data))
     setLoading(false)
   }
 
