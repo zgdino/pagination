@@ -7,8 +7,10 @@ function App() {
   const [followers, setFollowers] = useState([])
 
   useEffect(() => {
+    // only if it is loading
     if (loading) return 
     setFollowers(data[page])
+    // rerun when loading changes
   }, [loading])
   
   return <main>
@@ -19,6 +21,7 @@ function App() {
     </div>
     <section className="followers">
       <div className="container">
+        {/* changed from data.map to followers.map */}
         {followers.map((follower) => {
           // existing follower.id from the API
           // ...follower is adding all the properties from that specific follower from API
