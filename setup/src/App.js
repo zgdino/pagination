@@ -32,6 +32,7 @@ function App() {
         {/* display only if not loading */}
         {!loading && (
           <div className='btn-container'>
+            {/* focus on index over item */}
             {data.map((item, index) => {
               return <button key={index} className='page-btn'>button</button>
             })}
