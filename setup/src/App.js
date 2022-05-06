@@ -28,6 +28,8 @@ function App() {
           return <Follower key={follower.id} {...follower}/>
         })}
       </div>
+      {/* display only if not loading */}
+      {!loading && <div className="btn-container">hello world</div>}
     </section>
   </main>
 }
