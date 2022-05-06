@@ -10,8 +10,12 @@ function App() {
     // only if it is loading
     if (loading) return
     setFollowers(data[page])
-    // rerun when loading changes
-  }, [loading])
+    // rerun when loading and page change
+  }, [loading, page])
+
+  const handlePage = (index) => {
+    setPage(index)
+  }
 
   return (
     <main>
@@ -34,7 +38,15 @@ function App() {
           <div className='btn-container'>
             {/* focus on index over item */}
             {data.map((item, index) => {
-              return <button key={index} className='page-btn'>button</button>
+              return (
+                <button
+                  key={index}
+                  className='page-btn'
+                  onClick={() => handlePage(index)}
+                >
+                  {index + 1}
+                </button>
+              )
             })}
           </div>
         )}
