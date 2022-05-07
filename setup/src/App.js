@@ -17,6 +17,8 @@ function App() {
     setPage(index)
   }
 
+
+
   return (
     <main>
       <div className='section-title'>
@@ -36,6 +38,9 @@ function App() {
         {/* display only if not loading */}
         {!loading && (
           <div className='btn-container'>
+            <button className='prev-btn' onClick={prevPage}>
+              prev
+            </button>
             {/* focus on index over item */}
             {data.map((item, index) => {
               return (
@@ -48,6 +53,9 @@ function App() {
                 </button>
               )
             })}
+            <button className='next-btn' onClick={nextPage}>
+              next
+            </button>
           </div>
         )}
       </section>
