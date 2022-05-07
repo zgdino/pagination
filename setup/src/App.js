@@ -1,4 +1,4 @@
-import React, { useState, useEffect } from 'react'
+import React, { useState, useEffect, useDebugValue } from 'react'
 import { useFetch } from './useFetch'
 import Follower from './Follower'
 function App() {
@@ -19,7 +19,9 @@ function App() {
 
   const nextPage = () => {
     setPage((oldPage) => {
+      // local variable nextPage
       let nextPage = oldPage + 1
+      // if next button clicked at highest useDebugValue, got to the lowest value
       if (nextPage > data.length - 1) {
         nextPage = 0
       }
@@ -29,7 +31,9 @@ function App() {
 
   const prevPage = () => {
     setPage((oldPage) => {
+      // local variable prevPage
       let prevPage = oldPage - 1
+      // if prev button clicked at 0 go to the highest value
       if (prevPage < 0) {
         prevPage = data.length -1
       }
