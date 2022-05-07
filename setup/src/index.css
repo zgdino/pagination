@@ -210,7 +210,8 @@ Pagination
 .prev-btn,
 .next-btn {
   background: transparent;
-  border-color: transparent;
+  border-color: var(--clr-grey-3);
+  color: var(--clr-grey-5);
   font-weight: bold;
   text-transform: capitalize;
   letter-spacing: var(--spacing);
